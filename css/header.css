@@ -1,0 +1,40 @@
+.navbar{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+}
+h1{
+  margin-left: 50px; 
+}
+.navLinks {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: hsl(0, 0%, 43%);
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin-left: 80px;
+}
+.navLinks:hover {
+    color: black;
+}
+#loginBtn{
+   margin-left: 100px;
+}
+.lrcBtn{
+   width: 120px;
+   height: 35px;
+    background-color: transparent;
+    border: 2px solid black;
+    margin-left: 20px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.lrcBtn:hover{
+    background-color: black;
+    color: white;
+}
+i{
+    margin-right: 10px;
+}
