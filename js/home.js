@@ -1,9 +1,17 @@
 const productList = document.getElementById('product-list');
+const categoryButtons = document.querySelectorAll('#category-buttons button');
 
+let allProducts = [];
+
+// Fetch all products once
 fetch('https://fakestoreapi.com/products')
   .then(res => res.json())
-  .then(data => renderProducts(data));
+  .then(data => {
+    allProducts = data;
+    renderProducts(allProducts);
+  });
 
+// Render product cards
 function renderProducts(products) {
   productList.innerHTML = '';
   products.forEach(product => {
@@ -24,4 +32,26 @@ function renderProducts(products) {
     productList.appendChild(card);
   });
 }
+
+// Add event listeners to category buttons
+categoryButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const selectedCategory = button.dataset.category;
+
+    // Highlight active button
+    categoryButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    // Filter products
+    if (selectedCategory === 'all') {
+      renderProducts(allProducts);
+    } else {
+      const filteredProducts = allProducts.filter(product =>
+        product.category.toLowerCase() === selectedCategory.toLowerCase()
+      );
+      renderProducts(filteredProducts);
+    }
+  });
+});
+
 
