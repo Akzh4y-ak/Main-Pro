@@ -6,44 +6,48 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/header.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
+    <nav class="navbar">
+        <h1>Ecommerce</h1>
+  <a class="navLinks" href="#">Home</a>
+  <a class="navLinks" href="#">Products</a>
+  <a class="navLinks" href="#">About</a>
+  <a class="navLinks" href="#">Contact</a>
+  <button id="loginBtn" class="lrcBtn"><i class="fa-solid fa-right-to-bracket"></i>Login</button>
+  <button class="lrcBtn"><i class="fa-solid fa-user-plus"></i>Register</button>
+  <button class="lrcBtn"><i class="fa-solid fa-cart-shopping"></i>Cart</button>
+  </nav>
     <h1 id="abthead">About Us</h1><hr>
     <div id="aboutusCont">
-       
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet atque praesentium ullam eaque neque dolores excepturi sint accusamus modi! Qui dolor, possimus aliquam et magnam quaerat reprehenderit error labore recusandae.
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid dolor reiciendis dignissimos accusantium eaque commodi, impedit nisi reprehenderit, totam autem tempora magni veritatis vel corrupti sed expedita? Nesciunt, odio natus!
             Lorem ipsum dolor sit amet consectetur adipisicing elit
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis illum fugit, ab optio laborum id laudantium iure deleniti! Id eum fuga enim quos iure in pariatur amet omnis tempore soluta?
         </p>
     </div>
-    <h1 id="ourhead">Our Products</h1><hr>
-    <div id="ourproCont">
-        <section class="card">
-            <img src="../images/mens clothing.jpeg" alt="mens clothing" />
-            <div class="card-content">
-              <h4 class="card-title">Mens Clothing</h4>
-            </div>
-        </section>
-        <section class="card">
-            <img src="../images/womens clothing.jpeg" alt="womens clothing" />
-            <div class="card-content">
-              <h4 class="card-title">Womens Clothing</h4>
-            </div>
-        </section>
-        <section class="card">
-            <img src="../images/jewellery.webp" alt="jewelery" />
-            <div class="card-content">
-              <h4 class="card-title">jewelery</h4>
-            </div>
-        </section>
-        <section class="card">
-            <img src="../images/electronics.jpeg" alt="jewelery" />
-            <div class="card-content">
-              <h4 class="card-title">Electronics</h4>
-            </div>
-        </section>
-    </div>
+    <h1 id="ourhead">Our Products</h1>
+    <div class="product-section">
+        <div class="product-cards">
+          <div class="card">
+            <img src="../images/mens clothing.jpeg" alt="Mens's Clothing">
+            <p>Mens's Clothing</p>
+          </div>
+          <div class="card">
+            <img src="../images/womens clothing.jpeg" alt="Women's Clothing">
+            <p>Women's Clothing</p>
+          </div>
+          <div class="card">
+            <img src="../images/jewellery.webp" alt="Jewelry">
+            <p>Jewelry</p>
+          </div>
+          <div class="card">
+            <img src="../images/electronics.jpeg" alt="Electronics">
+            <p>Electronics</p>
+          </div>
+        </div>
+      </div>
+      
 </body>
 </html>
