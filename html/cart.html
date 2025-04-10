@@ -6,6 +6,122 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .cart-container {
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .cart-grid {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .item-list, .order-summary {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+    .item-list {
+      flex: 3;
+    }
+    .order-summary {
+      flex: 1;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+    }
+    .cart-item img {
+      width: 80px;
+      height: auto;
+      margin-right: 20px;
+    }
+    .item-info {
+      flex: 1;
+    }
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .quantity-controls button {
+      padding: 5px 10px;
+      font-size: 16px;
+    }
+    .checkout-btn {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cart-container">
+    <h1>Cart</h1>
+    <div class="cart-grid">
+      <div class="item-list">
+        <!-- Example Cart Item -->
+        <div class="cart-item">
+          <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="Backpack" />
+          <div class="item-info">
+            <strong>Fjallraven - Foldsack No. 1</strong>
+            <p>1 × $109.95</p>
+          </div>
+          <div class="quantity-controls">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+        </div>
+        <!-- Add more items here -->
+      </div>
+
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <p>Products (6): <strong>$1149</strong></p>
+        <p>Shipping: <strong>$30</strong></p>
+        <hr>
+        <p>Total amount: <strong>$1179</strong></p>
+        <button class="checkout-btn">Go to checkout</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
 </body>
 </html>
