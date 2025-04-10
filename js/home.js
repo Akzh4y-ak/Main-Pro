@@ -29,11 +29,15 @@ function renderProducts(products) {
       </div>
     `;
 
+    // 🛒 Attach event listener to "Add to Cart" button
+    const addBtn = card.querySelector('.add-btn');
+    addBtn.addEventListener('click', () => addToCart(product));
+
     productList.appendChild(card);
   });
 }
 
-// Add event listeners to category buttons
+// Filter products by category
 categoryButtons.forEach(button => {
   button.addEventListener('click', () => {
     const selectedCategory = button.dataset.category;
@@ -53,5 +57,39 @@ categoryButtons.forEach(button => {
     }
   });
 });
+
+
+// ✅ Add to Cart function
+function addToCart(product) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const existing = cart.find(item => item.id === product.id);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ ...product, quantity: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
+}
+
+// ✅ Update cart icon count
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const totalItems = cart.reduce((sum, item) => {
+    const qty = item.quantity || 1; // avoid NaN
+    return sum + qty;
+  }, 0);
+
+  const cartBtn = document.querySelector(".cart-btn");
+  if (cartBtn) {
+    cartBtn.innerHTML = `<i class="fa-solid fa-cart-shopping"></i> Cart (${totalItems})`;
+  }
+}
+
+// ✅ Call this on load
+window.addEventListener("DOMContentLoaded", updateCartCount);
 
 
