@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
 </head>
 <body>
-    
+    <nav class="navbar">
+        <h1>Ecommerce</h1>
+    <a class="navLinks" href="../html/home.html">Home</a>
+    <a class="navLinks" href="">Products</a>
+    <a class="navLinks" href="../html/about.html">About</a>
+    <a class="navLinks" href="../html/contact.html">Contact</a>
+    <button id="loginBtn" class="lrcBtn"><i class="fa-solid fa-right-to-bracket"></i>Login</button>
+    <button class="lrcBtn"><i class="fa-solid fa-user-plus"></i>Register</button>
+    <button class="lrcBtn"><i class="fa-solid fa-cart-shopping"></i>Cart</button>
+    </nav>
+        <h1 id="latpro">Latest Products</h1><hr>
+        <div id="category-buttons">
+            <button class="catBtn" data-category="all" class="active">All</button>
+            <button class="catBtn" data-category="men's clothing">Men's Clothing</button>
+            <button class="catBtn" data-category="women's clothing">Women's Clothing</button>
+            <button class="catBtn" data-category="jewelery">Jewelery</button>
+            <button class="catBtn" data-category="electronics">Electronics</button>
+          </div>
+          
+          
+        <div id="product-list" class="product-grid">
+        
+        </div>
+
+        <script src="../js/products.js"></script>
 </body>
 </html>
