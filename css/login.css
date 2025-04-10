@@ -23,7 +23,7 @@
     border-radius: 3px;
     border: 1px solid grey;
 }
-#loginBtn{
+#logbtn{
     display: flex;
     justify-content: center;
     justify-self: center;

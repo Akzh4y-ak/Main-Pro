@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
+    <nav class="navbar">
+        <h1>Ecommerce</h1>
+    <a class="navLinks" href="../html/home.html">Home</a>
+    <a class="navLinks" href="../html/products.html">Products</a>
+    <a class="navLinks" href="../html/about.html">About</a>
+    <a class="navLinks" href="../html/contact.html">Contact</a>
+    <a href="../html/login.html"><button id="loginBtn" class="lrcBtn"><i class="fa-solid fa-right-to-bracket"></i>Login</button></a>
+    <a href="../html/register.html"><button class="lrcBtn"><i class="fa-solid fa-user-plus"></i>Register</button></a>
+    <a href="../html/cart.html"><button class="lrcBtn cart-btn"><i class="fa-solid fa-cart-shopping"></i>Cart</button></a>
+    </nav>
     <h1 id="login">Login</h1><hr style="width: 1000px;">
     <div id="logincont">
         <form>
@@ -15,7 +26,7 @@
           <label>Password</label><br>
           <input class="logindet" type="password" placeholder="Password"><br><br>
           <span id="nh">New Here? </span><a id="reg" href="#">  Register</a><br><br>
-         <button id="loginBtn">Login</button>
+         <button id="logbtn">Login</button>
         </form>
     </div>
 </body>

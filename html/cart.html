@@ -1,62 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cart Page</title>
   <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <div class="cart-container">
-        <h1>Cart</h1>
-      
-        <div class="card-grid"> <!-- Corrected class: 'cart-grid' ➡ 'card-grid' -->
-      
-          <!-- Item List -->
-          <div class="itemlist"> <!-- Corrected class: 'item-list' ➡ 'itemlist' -->
-            <!-- Cart Item -->
-            <div class="cart-item">
-              <div class="left-side">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="Backpack" />
-                <div class="item-info">
-                  <strong>Fjallraven - Foldsack No. 1</strong>
-                  <p>1 × $109.95</p>
-                </div>
-              </div>
-              <div class="quantity-controls">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-              </div>
-            </div>
-            <!-- Add more cart items here -->
-          </div>
-      
-          <!-- Order Summary -->
-          <div class="order-summary">
-            <h3>Order Summary</h3>
-            <p>Products (6): <strong>$1149</strong></p>
-            <p>Shipping: <strong>$30</strong></p>
-            <hr>
-            <p>Total amount: <strong>$1179</strong></p>
-            <button class="checkout-btn">Go to checkout</button>
-          </div>
-      
-        </div>
+  <nav class="navbar">
+    <h1>Ecommerce</h1>
+    <a class="navLinks" href="../html/home.html">Home</a>
+    <a class="navLinks" href="../html/products.html">Products</a>
+    <a class="navLinks" href="../html/about.html">About</a>
+    <a class="navLinks" href="../html/contact.html">Contact</a>
+    <a href="../html/login.html"><button id="loginBtn" class="lrcBtn"><i class="fa-solid fa-right-to-bracket"></i> Login</button></a>
+    <a href="../html/register.html"><button class="lrcBtn"><i class="fa-solid fa-user-plus"></i> Register</button></a>
+    <a href="../html/cart.html"><button class="lrcBtn cart-btn"><i class="fa-solid fa-cart-shopping"></i> Cart</button></a>
+  </nav>
+
+  <div class="cart-container">
+    <h1>Cart</h1>
+
+    <div class="card-grid">
+
+      <!-- 🛒 Dynamic Item List -->
+      <div class="itemlist">
+        <!-- Items will be injected here from cart.js -->
       </div>
-      
-      <script src="../js/cart.js"></script>
+
+      <!-- Order Summary -->
+<div class="order-summary">
+    <h3>Order Summary</h3>
+    <p class="summary-products">Products (0): $0.00</p>
+    <p>Shipping: <strong>$30</strong></p>
+    <hr>
+    <p>Total amount: <strong class="summary-total">$30.00</strong></p>
+    <button class="checkout-btn">Go to checkout</button>
+  </div>
+  
+
+    </div>
+  </div>
+
+  <script src="../js/cart.js"></script>
 </body>
 </html>
 
-</body>
-</html>

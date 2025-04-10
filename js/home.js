@@ -14,6 +14,7 @@ fetch('https://fakestoreapi.com/products')
 // Render product cards
 function renderProducts(products) {
   productList.innerHTML = '';
+
   products.forEach(product => {
     const card = document.createElement('div');
     card.className = 'product-card';
@@ -29,7 +30,7 @@ function renderProducts(products) {
       </div>
     `;
 
-    // 🛒 Attach event listener to "Add to Cart" button
+    // ✅ Add-to-cart button logic
     const addBtn = card.querySelector('.add-btn');
     addBtn.addEventListener('click', () => addToCart(product));
 
@@ -37,7 +38,7 @@ function renderProducts(products) {
   });
 }
 
-// Filter products by category
+// Add event listeners to category buttons
 categoryButtons.forEach(button => {
   button.addEventListener('click', () => {
     const selectedCategory = button.dataset.category;
@@ -58,14 +59,13 @@ categoryButtons.forEach(button => {
   });
 });
 
-
-// ✅ Add to Cart function
+// ✅ Add to cart logic
 function addToCart(product) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const existing = cart.find(item => item.id === product.id);
-  if (existing) {
-    existing.quantity += 1;
+  const existingItem = cart.find(item => item.id === product.id);
+  if (existingItem) {
+    existingItem.quantity += 1;
   } else {
     cart.push({ ...product, quantity: 1 });
   }
@@ -74,22 +74,16 @@ function addToCart(product) {
   updateCartCount();
 }
 
-// ✅ Update cart icon count
+// ✅ Update cart count on navbar
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-  const totalItems = cart.reduce((sum, item) => {
-    const qty = item.quantity || 1; // avoid NaN
-    return sum + qty;
-  }, 0);
-
-  const cartBtn = document.querySelector(".cart-btn");
+  const cartBtn = document.querySelector(".cart-btn"); // make sure nav uses this class
   if (cartBtn) {
     cartBtn.innerHTML = `<i class="fa-solid fa-cart-shopping"></i> Cart (${totalItems})`;
   }
 }
 
-// ✅ Call this on load
+// ✅ Call it on page load
 window.addEventListener("DOMContentLoaded", updateCartCount);
-
-
