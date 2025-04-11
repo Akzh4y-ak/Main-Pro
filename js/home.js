@@ -3,7 +3,7 @@ const categoryButtons = document.querySelectorAll('#category-buttons button');
 
 let allProducts = [];
 
-// Fetch all products once
+// Fetching the api
 fetch('https://fakestoreapi.com/products')
   .then(res => res.json())
   .then(data => {
@@ -30,7 +30,7 @@ function renderProducts(products) {
       </div>
     `;
 
-    // ✅ Add-to-cart button logic
+    //  Add-to-cart button logic
     const addBtn = card.querySelector('.add-btn');
     addBtn.addEventListener('click', () => addToCart(product));
 
@@ -59,7 +59,7 @@ categoryButtons.forEach(button => {
   });
 });
 
-// ✅ Add to cart logic
+// Add to cart logic
 function addToCart(product) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -74,7 +74,7 @@ function addToCart(product) {
   updateCartCount();
 }
 
-// ✅ Update cart count on navbar
+//  Update cart count on navbar
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -85,5 +85,5 @@ function updateCartCount() {
   }
 }
 
-// ✅ Call it on page load
+//  Call it on page load
 window.addEventListener("DOMContentLoaded", updateCartCount);

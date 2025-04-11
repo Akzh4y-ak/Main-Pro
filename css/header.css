@@ -3,6 +3,14 @@
     justify-content: start;
     align-items: center;
     padding: 10px;
+    position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+    background-color: #f5f7fa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px 30px;
 }
 h1{
   margin-left: 50px; 
@@ -17,7 +25,10 @@ h1{
     margin-left: 80px;
 }
 .navLinks:hover {
-    color: black;
+    color: rgb(39, 36, 36);
+}
+.navLinks.active{
+    color: hsl(0, 0%, 9%);
 }
 #loginBtn{
    margin-left: 80px;
